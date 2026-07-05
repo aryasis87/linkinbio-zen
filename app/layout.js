@@ -4,10 +4,10 @@ import "./globals.css";
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-cormorant", weight: ["400", "500", "600"], style: ["normal", "italic"] });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Sena","jobTitle":"Guru Mindfulness","url":"https://linkinbio-zen.vercel.app","inLanguage":"id"}};
+const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Sena","jobTitle":"Guru Mindfulness","url":"https://zen.pintuweb.com","inLanguage":"id"}};
 
 export const metadata = {
-  metadataBase: new URL("https://linkinbio-zen.vercel.app"),
+  metadataBase: new URL("https://zen.pintuweb.com"),
   title: "Sena — Ruang Teduh",
   description: "Link in bio guru mindfulness & teh, Sena: kelas, retret, dan tulisan dalam satu ruang yang tenang.",
   applicationName: "Sena",
@@ -15,11 +15,11 @@ export const metadata = {
   authors: [{ name: "Sena" }],
   creator: "Sena",
   publisher: "Sena",
-  alternates: { canonical: "https://linkinbio-zen.vercel.app" },
+  alternates: { canonical: "https://zen.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://linkinbio-zen.vercel.app",
+    url: "https://zen.pintuweb.com",
     siteName: "Sena",
     title: "Sena — Ruang Teduh",
     description: "Link in bio guru mindfulness & teh, Sena: kelas, retret, dan tulisan dalam satu ruang yang tenang.",
