@@ -1,55 +1,56 @@
-'use client';
+import { ArrowUpRight } from 'lucide-react';
 
-import Image from 'next/image';
-import { Globe, Mail, Linkedin, Twitter } from 'lucide-react';
+const LINKS = [
+  { no: 'I', label: 'Kelas Meditasi', meta: 'daring, tiap Selasa & Kamis' },
+  { no: 'II', label: 'Retret Akhir Pekan', meta: 'Lembang — batch September' },
+  { no: 'III', label: 'Jurnal & Tulisan', meta: 'catatan tentang pelan-pelan' },
+  { no: 'IV', label: 'Rekaman Panduan', meta: 'napas 10 menit, gratis' },
+  { no: 'V', label: 'Undang Sena', meta: 'sesi untuk tim & komunitas' },
+];
 
 export default function Home() {
-  const links = [
-    { label: 'Portfolio', icon: <Globe size={18} />, url: '#' },
-    { label: 'LinkedIn', icon: <Linkedin size={18} />, url: '#' },
-    { label: 'Twitter', icon: <Twitter size={18} />, url: '#' },
-    { label: 'Email Me', icon: <Mail size={18} />, url: 'mailto:hi@zen.com' },
-  ];
-
   return (
-    <main className="min-h-screen bg-[#f8f8f7] text-gray-800 font-serif flex items-center justify-center px-4">
-      <div className="max-w-md w-full bg-white shadow-xl rounded-2xl p-8 border border-gray-200 relative">
-        <div className="absolute -top-3 -left-3 w-14 h-14 bg-green-100 rounded-full blur-2xl opacity-50"></div>
-        <div className="text-center mb-6">
-          <div className="w-24 h-24 mx-auto mb-2 relative rounded-full overflow-hidden">
-            <Image
-              src="/images/p1.jpg"
-              alt="Avatar"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-          <h1 className="text-3xl font-bold">NamaAnda</h1>
-          <span className="inline-block text-xs bg-green-100 text-green-600 rounded-full px-3 py-1 mt-1">
-            Writer & Coach
-          </span>
-          <p className="mt-2 text-sm text-gray-500 italic">
-            {`"Creating space, in pixels and mind."`}
-          </p>
+    <main className="flex min-h-screen items-center justify-center px-6 py-16">
+      <div className="w-full max-w-sm text-center">
+        {/* Enso */}
+        <div className="rise relative mx-auto h-24 w-24">
+          <span className="breathe absolute inset-0 rounded-full border border-sumi/40" aria-hidden="true" />
+          <span className="absolute inset-3 grid place-items-center rounded-full bg-matcha/10 font-serif text-3xl italic text-matcha">禅</span>
         </div>
-        <div className="space-y-4">
-          {links.map(({ label, icon, url }, i) => (
+
+        <header className="rise mt-8" style={{ animationDelay: '0.15s' }}>
+          <p className="text-[10px] uppercase tracking-[0.45em] text-sumi/45">Ruang teduh</p>
+          <h1 className="mt-3 font-serif text-5xl">Sena</h1>
+          <p className="mt-3 text-sm leading-relaxed text-sumi/55">
+            Guru mindfulness &amp; teman minum teh.<br />Mengajak pulang ke napas sendiri.
+          </p>
+        </header>
+
+        <span className="rise mx-auto mt-8 block h-10 w-px bg-sumi/20" style={{ animationDelay: '0.3s' }} aria-hidden="true" />
+
+        {/* Daftar tenang */}
+        <nav className="mt-8" aria-label="Tautan">
+          {LINKS.map((l, i) => (
             <a
-              key={i}
-              href={url}
-              className="w-full flex items-center justify-between px-4 py-3 bg-gray-50 border border-gray-200 rounded-md hover:bg-gray-100 transition"
+              key={l.no}
+              href="#"
+              className="rise hairline group flex items-baseline gap-4 border-b py-5 text-left transition-colors first:border-t hover:bg-white"
+              style={{ animationDelay: `${0.4 + i * 0.1}s` }}
             >
-              <span className="flex items-center gap-2">
-                {icon} {label}
+              <span className="w-7 font-serif text-sm italic text-matcha">{l.no}</span>
+              <span className="flex-1">
+                <span className="block font-serif text-2xl leading-tight transition group-hover:text-matcha">{l.label}</span>
+                <span className="mt-0.5 block text-xs text-sumi/45">{l.meta}</span>
               </span>
-              <span className="text-gray-400">↗</span>
+              <ArrowUpRight size={15} className="translate-y-0.5 text-sumi/25 transition group-hover:text-matcha" />
             </a>
           ))}
-        </div>
-        <p className="text-xs text-center text-gray-400 mt-6">
-          Made with calm energy 🌿
+        </nav>
+
+        <p className="rise mt-10 font-serif text-lg italic text-sumi/50" style={{ animationDelay: '1s' }}>
+          “Pelan itu bukan lambat — pelan itu hadir.”
         </p>
+        <p className="rise mt-6 text-[11px] tracking-wide text-sumi/35" style={{ animationDelay: '1.1s' }}>sena@ruangteduh.id · Bandung</p>
       </div>
     </main>
   );

@@ -1,41 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --color-washi: #f6f4ee;
+  --color-sumi: #2b2a26;
+  --color-matcha: #7d8c5c;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-washi);
+  color: var(--color-sumi);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(15px); }
-}
-@keyframes float-alt {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-.animate-float-slow {
-  animation: float-slow 8s ease-in-out infinite;
-}
-.animate-float-alt {
-  animation: float-alt 7s ease-in-out infinite;
-}
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; }
+
+/* Lingkaran enso bernapas */
+@keyframes breathe { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.06); opacity: 0.8; } }
+.breathe { animation: breathe 6s ease-in-out infinite; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.9s ease-out both; }
+
+.hairline { border-color: rgba(43, 42, 38, 0.14); }
+
+:focus-visible { outline: 1.5px solid var(--color-matcha); outline-offset: 4px; }
