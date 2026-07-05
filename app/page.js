@@ -1,11 +1,11 @@
 import { ArrowUpRight } from 'lucide-react';
 
 const LINKS = [
-  { no: 'I', label: 'Kelas Meditasi', meta: 'daring, tiap Selasa & Kamis' },
-  { no: 'II', label: 'Retret Akhir Pekan', meta: 'Lembang — batch September' },
-  { no: 'III', label: 'Jurnal & Tulisan', meta: 'catatan tentang pelan-pelan' },
-  { no: 'IV', label: 'Rekaman Panduan', meta: 'napas 10 menit, gratis' },
-  { no: 'V', label: 'Undang Sena', meta: 'sesi untuk tim & komunitas' },
+  { no: 'I', label: 'Kelas Meditasi', meta: 'daring, tiap Selasa & Kamis', url: 'https://wa.me/6281339908765' },
+  { no: 'II', label: 'Retret Akhir Pekan', meta: 'Lembang — batch September', url: 'https://wa.me/6281339908765' },
+  { no: 'III', label: 'Jurnal & Tulisan', meta: 'catatan tentang pelan-pelan', url: 'https://medium.com' },
+  { no: 'IV', label: 'Rekaman Panduan', meta: 'napas 10 menit, gratis', url: 'https://www.youtube.com' },
+  { no: 'V', label: 'Undang Sena', meta: 'sesi untuk tim & komunitas', url: 'mailto:halo@ruangteduh.id' },
 ];
 
 export default function Home() {
@@ -33,7 +33,9 @@ export default function Home() {
           {LINKS.map((l, i) => (
             <a
               key={l.no}
-              href="#"
+              href={l.url}
+              target={l.url.startsWith('http') ? '_blank' : undefined}
+              rel={l.url.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="rise hairline group flex items-baseline gap-4 border-b py-5 text-left transition-colors first:border-t hover:bg-white"
               style={{ animationDelay: `${0.4 + i * 0.1}s` }}
             >
