@@ -1,12 +1,12 @@
-# Sena — Ruang Teduh
+# Sena — Guru Mindfulness & Teman Minum Teh
 
-Link in bio guru mindfulness & teh, Sena: kelas, retret, dan tulisan dalam satu ruang yang tenang.
+Tautan Sena, guru mindfulness di Bandung: kelas meditasi daring Selasa dan Kamis, retret Lembang 14–15 November 2026, dan latihan napas terpandu tiga menit.
 
 **Demo live:** https://linkinbio-zen.vercel.app
 
 ![Tangkapan layar Sena](public/og.jpg)
 
-> Template link-in-bio dengan persona fiktif.
+> Template link-in-bio dengan persona fiktif. Akun, klien, harga, dan jadwal hanya contoh; tautan utama menuju halaman dalam yang benar-benar ada, dan formulir tidak mengirim data.
 
 ## Konsep
 
@@ -14,7 +14,9 @@ Persona Sena, mindfulness dan teh. Minimal serif dengan lingkaran enso yang bern
 
 ## Halaman
 
-`/`
+- `/` — enso yang bernapas, daftar tautan berangka Romawi, garis benang vertikal, kutipan
+- `/kelas` — jadwal kelas, paket, susunan acara retret, formulir daftar
+- `/napas` — pemandu napas interaktif: tiga pola, durasi 1/3/5 menit, lingkaran mengembang-mengempis
 
 ## Teknologi
 

@@ -6,6 +6,7 @@
   --color-washi: #f6f4ee;
   --color-sumi: #2b2a26;
   --color-matcha: #7d8c5c;
+  --color-matcha-ink: #55623b; /* hijau matcha gelap untuk teks (5,8:1 di atas washi) */
 }
 
 body {

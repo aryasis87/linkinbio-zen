@@ -8,10 +8,10 @@ const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEnt
 
 export const metadata = {
   metadataBase: new URL("https://linkinbio-zen.vercel.app"),
-  title: "Sena — Ruang Teduh",
-  description: "Link in bio guru mindfulness & teh, Sena: kelas, retret, dan tulisan dalam satu ruang yang tenang.",
+  title: { default: "Sena — Guru Mindfulness & Teman Minum Teh", template: "%s — Sena" },
+  description: "Tautan Sena, guru mindfulness di Bandung: kelas meditasi daring Selasa dan Kamis, retret Lembang 14–15 November 2026, dan latihan napas terpandu tiga menit.",
   applicationName: "Sena",
-  keywords: ["link in bio", "mindfulness", "meditasi", "kelas", "wellness"],
+  keywords: ["kelas meditasi daring", "mindfulness bandung", "latihan napas", "retret lembang", "link in bio meditasi"],
   authors: [{ name: "Sena" }],
   creator: "Sena",
   publisher: "Sena",
@@ -21,14 +21,14 @@ export const metadata = {
     locale: "id_ID",
     url: "https://linkinbio-zen.vercel.app",
     siteName: "Sena",
-    title: "Sena — Ruang Teduh",
-    description: "Link in bio guru mindfulness & teh, Sena: kelas, retret, dan tulisan dalam satu ruang yang tenang.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Sena — Ruang Teduh" }],
+    title: "Sena — Guru Mindfulness & Teman Minum Teh",
+    description: "Tautan Sena, guru mindfulness di Bandung: kelas meditasi daring Selasa dan Kamis, retret Lembang 14–15 November 2026, dan latihan napas terpandu tiga menit.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Sena — Guru Mindfulness & Teman Minum Teh" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sena — Ruang Teduh",
-    description: "Link in bio guru mindfulness & teh, Sena: kelas, retret, dan tulisan dalam satu ruang yang tenang.",
+    title: "Sena — Guru Mindfulness & Teman Minum Teh",
+    description: "Tautan Sena, guru mindfulness di Bandung: kelas meditasi daring Selasa dan Kamis, retret Lembang 14–15 November 2026, dan latihan napas terpandu tiga menit.",
     images: ["/og.jpg"],
   },
   robots: {

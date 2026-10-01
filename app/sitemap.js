@@ -1,5 +1,6 @@
+const SITE = "https://linkinbio-zen.vercel.app";
+
 export default function sitemap() {
-  return [
-    { url: "https://linkinbio-zen.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-  ];
+  const now = new Date();
+  return ["", "/kelas", "/napas"].map((r, i) => ({ url: SITE + r, lastModified: now, changeFrequency: "monthly", priority: i ? 0.7 : 1 }));
 }
